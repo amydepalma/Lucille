@@ -2,7 +2,7 @@
     "key": "post_type_6587444f2122b",
     "title": "Press Releases",
     "menu_order": 0,
-    "active": true,
+    "active": false,
     "post_type": "press-release",
     "advanced_configuration": true,
     "import_source": "",
@@ -81,5 +81,5 @@
     "delete_with_user": false,
     "register_meta_box_cb": "",
     "enter_title_here": "",
-    "modified": 1703363762
+    "modified": 1707573938
 }

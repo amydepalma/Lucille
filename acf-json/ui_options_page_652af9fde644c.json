@@ -1,7 +1,7 @@
 {
     "key": "ui_options_page_652af9fde644c",
     "title": "Theme Settings",
-    "active": true,
+    "active": false,
     "menu_order": 0,
     "page_title": "Theme Settings",
     "menu_slug": "lucille-settings",
@@ -18,5 +18,5 @@
     "data_storage": "options",
     "post_id": "",
     "autoload": 0,
-    "modified": 1706415566
+    "modified": 1707574009
 }
