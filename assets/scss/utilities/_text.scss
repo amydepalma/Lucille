@@ -1,0 +1,46 @@
+/* ----------------
+Sizes & Weights
+------------------------------*/
+@each $fontSize in (xs, sm, md, lg, xl, huge, jumbo, super) {
+  .fs-#{$fontSize} {
+    font-size: var(--fs-#{$fontSize}) !important;
+  }
+}
+
+@each $fontWeight in (light, regular, semibold, bold) {
+  .fw-#{$fontWeight} {
+    font-weight: var(--fw-#{$fontWeight}) !important;
+  }
+}
+
+/* ----------------
+Various utils, added as needed
+------------------------------*/
+
+.list-unstyled {
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+/* ----------------
+ALLY
+------------------------------*/
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  @include visually-hidden();
+}
+
+a#skip-to-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 10000;
+  background-color: $yellow-500;
+  // @extend .link-white;
+}

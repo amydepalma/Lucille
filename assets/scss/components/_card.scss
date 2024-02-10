@@ -1,0 +1,28 @@
+.card {
+	position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: $white;
+  background-clip: border-box;
+	border: rem(1) solid $gray-100;
+	border-radius: rem(18);
+
+	&-body {
+		flex: 1 1 auto;
+		padding: 1.5rem 1rem;
+	}
+
+	&-img-top {
+		width: 100%;
+		object-fit: cover;
+		max-height: rem(305);
+		border-top-left-radius: rem(18);
+		border-top-right-radius: rem(18);
+	}
+
+	&-text {
+		height: 100%; // make the button align tot he bottom
+	}
+}

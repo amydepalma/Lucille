@@ -1,0 +1,222 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "layout": {
+      "contentSize": "initial",
+      "wideSize": "initial"
+    },
+    "border": {
+      "color": false,
+      "radius": false,
+      "style": false,
+      "width": false
+    },
+    "typography": {
+      "dropCap": false,
+      "customFontSize": false,
+      "fontSizes": [
+        {
+          "slug": "xs",
+          "size": "var(--fs-xs)",
+          "name": "Extra Small"
+        },
+        {
+          "slug": "sm",
+          "size": "var(--fs-sm)",
+          "name": "Small"
+        },
+        {
+          "slug": "md",
+          "size": "var(--fs-md)",
+          "name": "Medium (Base)"
+        },
+        {
+          "slug": "lg",
+          "size": "var(--fs-lg)",
+          "name": "Large"
+        },
+        {
+          "slug": "xl",
+          "size": "var(--fs-xl)",
+          "name": "Extra Large"
+        },
+        {
+          "slug": "xxl",
+          "size": "var(--fs-xxl)",
+          "name": "Extra Extra Large"
+        },
+        {
+          "slug": "jumbo",
+          "size": "var(--fs-jumbo)",
+          "name": "Jumbo"
+        },
+        {
+          "slug": "super",
+          "size": "var(--fs-super)",
+          "name": "Super"
+        }
+      ],
+      "fontFamilies": [
+        {
+          "fontFamily": "var(--ff-base)",
+          "slug": "body",
+          "name": "Body"
+        },
+        {
+          "fontFamily": "var(--ff-headings)",
+          "slug": "headings",
+          "name": "Headings"
+        }
+      ]
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "customGradient": false,
+      "customDuotone": false,
+      "palette": [
+        {
+          "slug": "text-base",
+          "color": "var(--text-base)",
+          "name": "Text Color"
+        },
+        {
+          "slug": "white",
+          "color": "var(--white)",
+          "name": "White"
+        },
+        {
+          "slug": "black",
+          "color": "var(--black)",
+          "name": "Black"
+        },
+        {
+          "slug": "blue-300",
+          "color": "var(--blue-300)",
+          "name": "Blue"
+        },
+        {
+          "slug": "blue-100",
+          "color": "var(--blue-100)",
+          "name": "Blue 100"
+        },
+        {
+          "slug": "blue-200",
+          "color": "var(--blue-200)",
+          "name": "Blue 200"
+        },
+        {
+          "slug": "blue-400",
+          "color": "var(--blue-400)",
+          "name": "Blue 400"
+        },
+        {
+          "slug": "blue-500",
+          "color": "var(--blue-500)",
+          "name": "Blue 500"
+        },
+        {
+          "slug": "yellow-300",
+          "color": "var(--yellow-300)",
+          "name": "Yellow"
+        },
+        {
+          "slug": "yellow-100",
+          "color": "var(--yellow-100)",
+          "name": "Yellow 100"
+        },
+        {
+          "slug": "yellow-200",
+          "color": "var(--yellow-200)",
+          "name": "Yellow 200"
+        },
+        {
+          "slug": "yellow-400",
+          "color": "var(--yellow-400)",
+          "name": "Yellow 400"
+        },
+        {
+          "slug": "yellow-500",
+          "color": "var(--yellow-500)",
+          "name": "Yellow 500"
+        },
+        {
+          "slug": "gray-100",
+          "color": "var(--gray-100)",
+          "name": "gray 100"
+        },
+        {
+          "slug": "gray-200",
+          "color": "var(--gray-200)",
+          "name": "gray 200"
+        },
+        {
+          "slug": "gray-300",
+          "color": "var(--gray-300)",
+          "name": "gray 300"
+        },
+        {
+          "slug": "gray-400",
+          "color": "var(--gray-400)",
+          "name": "gray 400"
+        },
+        {
+          "slug": "gray-500",
+          "color": "var(--gray-500)",
+          "name": "gray 500"
+        }
+      ]
+    },
+    "blocks": {
+      "core/heading": {
+        "typography": {
+          "fontSizes": [
+            {
+              "size": "var(--h5)",
+              "slug": "h5",
+              "name": "Extra Small"
+            },
+            {
+              "size": "var(--h4)",
+              "slug": "h4",
+              "name": "Small"
+            },
+            {
+              "size": "var(--h3)",
+              "slug": "h3",
+              "name": "Medium"
+            },
+            {
+              "size": "var(--h2)",
+              "slug": "h2",
+              "name": "Large"
+            },
+            {
+              "size": "var(--h1)",
+              "slug": "h1",
+              "name": "Extra Large"
+            },
+            {
+              "size": "var(--fs-jumbo)",
+              "slug": "jumbo",
+              "name": "Jumbo"
+            },
+            {
+              "size": "var(--fs-super)",
+              "slug": "super",
+              "name": "Super"
+            },
+            {
+              "size": "var(--fs-giant)",
+              "slug": "giant",
+              "name": "Giant"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+%btn {
+	display: inline-flex;
+	align-items: center;
+	padding: rem(12) rem(24) !important;
+	margin: 0;
+	border-width: rem(2) !important;
+	border-style: solid;
+	text-transform: uppercase;
+	font-weight: 700;
+	border-radius: var(--spacing-base);
+
+	&:hover,
+	&:focus,
+	&:focus-visible {}
+}
+
+%btn--primary {}
+
+input[type="button"],
+button,
+.button {
+	@extend %btn;
+}
+
+.button {
+	&--primary {
+		color: var(--white) !important;
+		border-color: transparent !important;
+		background-color: var(--blue-300) !important;
+
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			color: var(--white) !important;
+			border-color: var(--blue-300) !important;
+			background-color: var(--blue-500) !important;
+		}
+	}
+}
+
+
+/*
+Gutenberg Button Style Overrides
+*/
+.wp-block-button {
+	&__link {
+		@extend %btn;
+		@extend .button--primary;
+	}
+
+	.wp-block-button__link {
+
+		// Hover/focus states
+		@each $infix,
+		$color in $theme-colors {
+			&.has-background.has-#{"" + $infix}-background-color {
+				//TODO COLOR CONTRAST; got one online real quick but not working; moved on hah
+				color: contrast-color($color);
+				border-color: $color !important;
+				background-color: $color;
+
+				&:hover,
+				&:focus,
+				&:focus-visible {
+					color: $color !important;
+					border-color: $color !important;
+					background-color: $white !important;
+				}
+			}
+		}
+	}
+
+	//TODO: Examples from previous asset build, could be useful for the outlines and other styles
+
+	// &.is-style-fill {
+	// 	.wp-block-button__link {
+
+	// 		// Hover/focus states
+	// 		@each $infix,
+	// 		$color in $theme-colors {
+	// 			&.has-background.has-#{"" + $infix}-background-color {
+	// 				color: $white;
+	// 				border-color: $color  !important;
+	// 				background-color: $color  !important;
+
+	// 				&:hover,
+	// 				&:focus,
+	// 				&:focus-visible {
+	// 					color: $color;
+	// 					border-color: $color  !important;
+	// 					background-color: $white  !important;
+	// 				}
+	// 			}
+
+	// 			&.has-text-color.has-#{"" + $infix}-color {
+	// 				color: $color  !important;
+
+	// 				&:hover,
+	// 				&:focus,
+	// 				&:focus-visible {
+	// 					color: if(color-contrast($color)==$color-contrast-light,
+	// 							shade-color($color, $link-shade-percentage),
+	// 							tint-color($color, $link-shade-percentage)) !important;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// &.is-style-outline {
+	// 	.wp-block-button__link {
+	// 		@extend .btn-outline-primary;
+
+	// 		// Hover/focus states
+	// 		@each $infix,
+	// 		$color in $theme-colors {
+	// 			&.has-#{"" + $infix}-color {
+	// 				border-color: $color  !important;
+
+	// 				&:hover,
+	// 				&:focus,
+	// 				&:focus-visible {
+	// 					color: $white  !important;
+	// 					background-color: $color  !important;
+	// 				}
+	// 			}
+	// 		}
+
+	// 		// Hovers/focus states for btns with transparent backgrounds & white text
+	// 		@each $infix,
+	// 		$color in $theme-colors {
+	// 			&.has-transparent-background-color.has-white-color {
+
+	// 				&:hover,
+	// 				&:focus,
+	// 				&:focus-visible {
+	// 					color: $primary  !important;
+	// 					background-color: $white  !important;
+	// 					border-color: $white  !important;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+}

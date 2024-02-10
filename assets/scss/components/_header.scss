@@ -1,0 +1,22 @@
+header.top {
+  position: relative;
+  background: $gray-100;
+  padding: 1rem 0;
+
+  ul {
+    display: inline-flex;
+    gap: 1.5rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+
+      ul li {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

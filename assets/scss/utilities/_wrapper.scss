@@ -1,0 +1,26 @@
+// Wrappers
+@each $name, $value in $breakpoints {
+	.wrapper-#{$name} {
+		--content-max-width: #{$value};
+		--content-padding-inline: var(--padding-inline);
+		width: min(var(--content-max-width), (100% - var(--content-padding-inline)/4));
+		margin-inline: auto;
+	}
+}
+
+@include media-breakpoint-up(xs) {
+	@each $name, $value in $breakpoints {
+		.wrapper-#{$name} {
+			width: min(var(--content-max-width), (100% - var(--content-padding-inline)/2));
+		}
+	}
+}
+
+.wrapper {
+	@extend .wrapper-md;
+}
+
+// Min-heights
+.mh-50vh {
+	min-height: 50vh;
+}

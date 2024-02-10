@@ -1,0 +1,103 @@
+/* ----------------
+BASE
+------------------------------*/
+:root,
+html,
+body {
+	font-family: var(--ff-base);
+	font-weight: var(--fw-base);
+	font-size: var(--fs-base);
+	font-style: normal;
+	line-height: var(--lh-base);
+	color: var(--text-base);
+}
+
+/* ----------------
+HEADINGS
+------------------------------*/
+@for $i from 1 through 6 {
+
+	h#{$i},
+	.h#{$i} {
+		font-size: var(--h#{$i});
+		font-weight: var(--fw-headings);
+		line-height: var(--lh-headings);
+		margin-bottom: var(--type-spacer);
+	}
+}
+
+// Margin-top for headings after a typography block
+:where(address,
+	blockquote,
+	dl,
+	figure,
+	form,
+	p,
+	pre,
+	table,
+	figure.wp-caption,
+	.wp-block-columns,
+	.wp-block-group) {
+	~ :is(h1, h2, h3, h4, h5, h6) {
+		margin-top: calc(var(--type-spacer) * 2);
+	}
+}
+
+/* ----------------
+OTHER TEXT ELEMENTS
+------------------------------*/
+
+// Text
+p {
+	font-size: var(--fs-body);
+	margin-bottom: calc(var(--type-spacer) * 3);
+}
+
+// Lists
+:where(dl, ol, ul):not(.wp-block-post-template) {
+	font-size: var(--fs-body);
+	padding-right: 0;
+	padding-left: calc(var(--spacer) * 4);
+	padding-inline-start: calc(var(--spacer) * 4);
+	padding-inline-end: 0;
+	padding-bottom: calc(var(--type-spacer) * 2);
+
+	li {
+		margin-bottom: calc(var(--spacer) * 0.65);
+	}
+
+	:is(dl, ol, ul) {
+		margin-top: calc(var(--spacer) * 0.65);
+	}
+}
+
+// a.external-link {
+// 	display: inline;
+
+// 	&::after {
+// 		content: "";
+// 		mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjEgMTN2MTBoLTIxdi0xOWgxMnYyaC0xMHYxNWgxN3YtOGgyem0zLTEyaC0xMC45ODhsNC4wMzUgNC02Ljk3NyA3LjA3IDIuODI4IDIuODI4IDYuOTc3LTcuMDcgNC4xMjUgNC4xNzJ2LTExeiIvPjwvc3ZnPg==");
+// 		mask-size: contain;
+// 		background: currentColor;
+// 		opacity: 0.8;
+// 		display: inline-block;
+// 		position: relative;
+// 		margin-left: 0.25em;
+// 		height: 0.75rem;
+// 		width: 0.75rem;
+// 	}
+
+// 	&.wp-block-button__link,
+// 	&.button {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 	}
+// }
+
+code {
+	font-family: "Courier New", Courier, monospace;
+	line-height: inherit;
+	padding-inline: .15em;
+	background-color: lighten($gray-100, 10%);
+}

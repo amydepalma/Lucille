@@ -1,0 +1,39 @@
+{
+  "name": "amydepalma/lucille",
+  "license": "MIT",
+  "description": "Composer packages for personal theme.",
+  "authors": [
+    {
+      "name": "Amy DePalma",
+      "email": "amydepalma@gmail.com",
+      "homepage": "https://github.com/amydepalma"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/duplicate-post": "^4.3"
+  },
+  "extra": {
+    "installer-paths": {
+      "../../plugins/{$name}": [
+        "type:wordpress-plugin"
+      ]
+    }
+  },
+  "require-dev": {
+    "php-stubs/acf-pro-stubs": "^6.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}

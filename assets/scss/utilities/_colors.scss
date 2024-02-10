@@ -1,0 +1,23 @@
+/* ----------------
+COLOR UTILITIES
+- Use WP utils for color; no need to rewrite
+------------------------------*/
+
+@each $name, $color in $theme-colors {
+	// .text-#{$name} {
+	// 	color: #{$color}
+	// }
+
+	.link-#{$name} {
+		color: #{$color};
+
+		&:hover,
+		&:focus {
+			// color: contrast-color($color);
+		}
+	}
+
+	// .bg-#{$name} {
+	// 	background-color: #{$color}
+	// }
+}

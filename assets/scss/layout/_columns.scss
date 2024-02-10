@@ -1,0 +1,78 @@
+%columns {
+	display: grid !important;
+	justify-content: center !important;
+	gap: calc(var(--padding-inline)/4) !important;
+	padding: 0 !important;
+
+	// Columns
+	&.columns-2 {
+		grid-template-columns: repeat(1, 1fr);
+
+		@include media-breakpoint-up(sm) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&.columns-3 {
+		grid-template-columns: repeat(1, 1fr);
+
+		@include media-breakpoint-up(sm) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media-breakpoint-up(md) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&.columns-4 {
+		grid-template-columns: repeat(1, 1fr);
+
+		@include media-breakpoint-up(sm) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media-breakpoint-up(xl) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	&.columns-5 {
+		grid-template-columns: repeat(1, 1fr);
+
+		@include media-breakpoint-up(sm) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media-breakpoint-up(md) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include media-breakpoint-up(xl) {
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+
+	&.columns-6 {
+		grid-template-columns: repeat(2, 1fr);
+
+		@include media-breakpoint-up(sm) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include media-breakpoint-up(md) {
+			grid-template-columns: repeat(6, 1fr);
+		}
+	}
+}
+
+.columns {
+	@extend %columns;
+
+	>div,
+	>a,
+	>img,
+	>li {
+		width: 100%;
+	}
+}

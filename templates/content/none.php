@@ -1,0 +1,1 @@
+<p class="lead">No posts found. Check back soon.</p>

@@ -1,0 +1,79 @@
+// Padding
+@for $i from 0 through 6 {
+	.p-#{$i} {
+		padding: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.py-#{$i} {
+		padding-block: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.pb-#{$i} {
+		padding-block-end: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.pt-#{$i} {
+		padding-block-start: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.px-#{$i} {
+		padding-inline: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.ps-#{$i} {
+		padding-inline-start: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.pe-#{$i} {
+		padding-inline-end: calc(var(--spacing-base) * #{$i}) !important;
+	}
+}
+
+// .page-padding {
+// 	padding-inline: calc(var(--padding-inline) * .5);
+
+// 	@include media-breakpoint-up(sm) {
+// 		padding-inline: var(--padding-inline);
+// 	}
+// }
+
+// Margin
+.m-auto {
+	margin: 0 auto !important;
+}
+
+@for $i from 0 through 6 {
+	.m-#{$i} {
+		margin: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.my-#{$i} {
+		margin-block: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.mb-#{$i} {
+		margin-block-end: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.mt-#{$i} {
+		margin-block-start: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.mx-#{$i} {
+		margin-inline: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.ms-#{$i} {
+		margin-inline-start: calc(var(--spacing-base) * #{$i}) !important;
+	}
+
+	.me-#{$i} {
+		margin-inline-end: calc(var(--spacing-base) * #{$i}) !important;
+	}
+}
+
+.mb-0 {
+	>:last-child {
+		margin-bottom: 0 !important;
+	}
+}

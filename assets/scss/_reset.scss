@@ -1,0 +1,114 @@
+@import "../../node_modules/modern-normalize";
+
+::before,
+::after {
+	text-decoration: inherit;
+	vertical-align: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+ol,
+ul {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	// Help prevent overflow of long words/names/URLs
+	overflow-wrap: break-word;
+
+	// Optional, not supported for all languages
+	hyphens: auto;
+}
+
+img {
+	display: block;
+	max-inline-size: 100%;
+}
+
+// Wordpress
+
+
+// /** Color classes */
+// @each $infix,
+// $color in $theme-colors {
+
+//   // Basic coloring
+//   .has-#{"" + $infix}-color {
+//     color: $color !important;
+
+//     a {
+//       @extend .link-#{"" + $infix};
+//     }
+//   }
+
+//   // Inline links
+//   a mark.has-inline-color.has-#{"" + $infix}-color {
+//     @extend .link-#{"" + $infix};
+//     text-decoration: underline;
+//   }
+
+//   a {
+
+//     &:hover,
+//     &:focus,
+//     &:focus-visible {
+//       mark.has-inline-color.has-#{"" + $infix}-color {
+//         color: contrast-color($color) !important;
+//       }
+//     }
+//   }
+
+//   // Background colors
+//   .has-#{"" + $infix}-background-color {
+//     background-color: $color !important;
+//   }
+// }
+
+// .has-white-color,
+// .has-light-color {
+//   @include font-smoothing(on);
+// }
+
+// /** Captions */
+// .wp-caption {
+//   // @extend .figure;
+// }
+
+// .wp-caption img {
+//   // @extend .figure-img;
+//   // @extend .img-fluid;
+// }
+
+// .wp-caption-text {
+//   // @extend .figure-caption;
+// }
+
+// /** Text meant only for screen readers */
+// .screen-reader-text {
+//   @extend .visually-hidden;
+//   @extend .visually-hidden-focusable;
+// }

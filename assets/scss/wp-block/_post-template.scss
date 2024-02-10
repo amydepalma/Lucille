@@ -1,0 +1,7 @@
+.wp-block-post-template {
+	@extend %columns;
+
+	li.wp-block-post {
+		width: 100% !important;
+	}
+}

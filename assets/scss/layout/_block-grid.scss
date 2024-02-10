@@ -1,0 +1,53 @@
+.block-grid {
+  --content-max-width: var(--mw-md);
+  --content-padding-inline: var(--padding-inline)/4;
+  --alignwide-max-width: var(--mw-lg);
+  --alignwide-size: calc((var(--alignwide-max-width) - var(--content-max-width)) / 2);
+  display: grid;
+  grid-template-columns: [alignfull-start] minmax(0, 1fr) [alignwide-start] minmax(0, var(--alignwide-size)) [content-start] min(100% - var(--content-padding-inline),
+      var(--content-max-width)) [content-end] minmax(0, var(--alignwide-size)) [alignwide-end] minmax(0, 1fr) [alignfull-end];
+
+  @include media-breakpoint-up(xs) {
+    --content-padding-inline: var(--padding-inline)/2;
+  }
+
+  // Set up different widths
+  >:not(.alignwide, .alignfull) {
+    grid-column: content;
+    margin-left: initial !important;
+    margin-right: initial !important;
+  }
+
+  >.alignfull,
+  >.alignwide {
+    // display: grid;
+    grid-template-columns: inherit;
+
+    >:not(.alignwide, .alignfull) {
+      margin-left: initial !important;
+      margin-right: initial !important;
+    }
+  }
+
+  >.alignfull {
+    grid-column: alignfull;
+
+    >:not(.alignwide, .alignfull) {
+      grid-column: alignfull;
+      max-width: 100%;
+    }
+
+    >.alignwide {
+      max-width: var(--alignwide-max-width);
+    }
+  }
+
+  >.alignwide {
+    grid-column: alignwide;
+
+    >:not(.alignwide, .alignfull) {
+      grid-column: alignwide;
+      max-width: var(--alignwide-max-width);
+    }
+  }
+}

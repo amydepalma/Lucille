@@ -1,0 +1,19 @@
+{
+  "name": "lucille",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "modern-normalize": "^2.0.0",
+    "parcel": "^2.9.3"
+  },
+  "scripts": {
+    "clean": "rm -rf dist/* && rm -rf .parcel-cache",
+    "dev": "npm run clean && parcel watch blocks/**/*.scss blocks/**/*.js assets/js/*.js assets/scss/main.scss assets/scss/editor.scss assets/images/* --no-source-maps",
+    "build": "npm run clean && parcel build blocks/**/*.scss blocks/**/*.js assets/js/*.js assets/scss/main.scss assets/scss/editor.scss assets/images/* --no-source-maps",
+    "deploy:production": "wsl rsync -azvh --progress --exclude '.git' --exclude 'node_modules' . amydep@104.236.2.60:/home/master/applications/amydepalma/public_html/wp-content/themes/lucille/ --delete-after"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "author": "Amy DePalma",
+  "license": "ISC"
+}

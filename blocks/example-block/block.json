@@ -1,0 +1,22 @@
+{
+	"apiVersion": 2,
+	"name": "example-block",
+	"title": "Example Block",
+	"description": "This is an example block.",
+	"category": "",
+	"acf": {
+        "mode": "preview",
+        "renderTemplate": "example-block.php"
+    },
+	"supports": {
+		"color" : {
+			"text" : true,
+			"background" : true,
+			"gradients" : true
+		},
+		"background" : true,
+		"anchor": true
+	},
+	"script": "example-block",
+	"style": "example-block"
+}

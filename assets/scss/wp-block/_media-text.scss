@@ -1,0 +1,85 @@
+body.editor-styles-wrapper .wp-block-media-text,
+.wp-block-media-text {
+	overflow-x: hidden;
+
+	// Default
+	.wp-block-media-text__content {
+		@extend .mb-0;
+		padding-right: var(--container_min_padding) !important;
+		padding-left: var(--container_min_padding) !important;
+
+		@include media-breakpoint-up(md) {
+			padding-left: 0 !important;
+			padding-right: #{$container_min_padding} !important;
+		}
+
+		&.has-media-on-the-right {
+			.wp-block-media-text__content {
+				@include media-breakpoint-up(md) {
+					padding-right: var(--container_min_padding) !important;
+					padding-left: var(--container_min_padding) !important;
+
+					&.block-editor-block-list__layout {
+						padding-left: #{$container_min_padding} !important;
+						padding-right: 0 !important;
+					}
+				}
+			}
+		}
+	}
+
+
+	// Up the breakpoint for stacking switch and move the image to the top
+	@include media-breakpoint-down(md) {
+
+		&.is-stacked-on-mobile {
+			height: 100% !important;
+			min-height: unset !important;
+			grid-template-columns: 100% !important;
+
+			.wp-block-media-text__content {
+				grid-column: 1;
+				grid-row: 2;
+				width: 100%;
+				max-width: none;
+				margin: 1.5rem 0 2rem 0;
+			}
+
+			.wp-block-media-text__media {
+				grid-column: 1;
+				grid-row: 1;
+				min-height: rem(305);
+			}
+		}
+	}
+
+	/** Styles */
+	// May need to adjust per theme
+	&.is-style-contained {
+		.wp-block-media-text__content {
+			@include media-breakpoint-up(md) {
+				padding-left: min(20%, rem(120)) !important;
+				padding-right: max(4%, 50vw - 660px) !important;
+
+				&.block-editor-block-list__layout {
+					padding-left: 8% !important;
+					padding-right: 8% !important;
+				}
+			}
+		}
+
+		&.has-media-on-the-right {
+			.wp-block-media-text__content {
+				@include media-breakpoint-up(md) {
+					padding-left: max(4%, 50vw - 660px) !important;
+					padding-right: min(20%, rem(120)) !important;
+
+					&.block-editor-block-list__layout {
+						padding-left: 8% !important;
+						padding-right: 8% !important;
+					}
+				}
+			}
+		}
+	}
+}
