@@ -1,6 +1,38 @@
 <?php
 
-function locate_custom_block($block_name, $args = [])
+/**
+ * Create a Custom Category (custom-blocks) and reorder all categories so it is at the top
+ * https://developer.wordpress.org/block-editor/reference-guides/filters/block-filters/#managing-block-categories
+ * https://wordpress.org/support/topic/reorder-editor-inserter-blocks/
+ */
+function ald_custom_block_category($categories, $editor_context) {
+	// Make sure a post is provided
+	if (!empty($editor_context->post)) {
+
+		// Create new category, Custom
+		$custom_category = [
+			'slug' => 'custom-blocks',
+			'title' => __('Custom Blocks', 'custom-layout' ),
+		];
+
+		// Move the Custom category to the top
+		$reordered_categories = [];
+		$reordered_categories[0] = $custom_category;
+
+		// Rebuild cats array
+		foreach($categories as $category) {
+			$reordered_categories[] = $category;
+		}
+
+		return $reordered_categories;
+	}
+}
+add_filter('block_categories_all', 'ald_custom_block_category', 10, 2);
+
+/**
+ * Functions for outputting blocks
+ */
+function ald_locate_custom_block($block_name, $args = [])
 {
   	$template_path = "blocks/$block_name/$block_name.php";
   	if (empty(locate_template($template_path, true, false, $args)) && current_user_can('edit_post', $args['post_id'])) :
@@ -8,7 +40,7 @@ function locate_custom_block($block_name, $args = [])
   	endif;
 }
 
-function render_custom_block($block, $content = '', $is_preview = false, $post_id = 0)
+function ald_render_custom_block($block, $content = '', $is_preview = false, $post_id = 0)
 {
   	$block_name = str_replace("acf/", "", $block["name"]);
   	$fields = get_fields() ?: [];
@@ -33,7 +65,7 @@ function render_custom_block($block, $content = '', $is_preview = false, $post_i
     	return $value !== null && $value !== '';
   	});
 
-  	locate_custom_block($block_name, $args);
+  	ald_locate_custom_block($block_name, $args);
 };
 
 // auto register custom blocks within blocks directory
@@ -45,7 +77,7 @@ add_action('acf/init', function () {
 		$block_dist_uri = trailingslashit(get_template_directory_uri() . '/dist/blocks/' . $block_name);
 
 		if (file_exists($block_json)) {
-			register_block_type($block_json, array('render_callback' => 'render_custom_block'));
+			register_block_type($block_json, array('render_callback' => 'ald_render_custom_block'));
 		}
 
 		if (file_exists($block_dist_path . $block_name . '.js')) {

@@ -10,32 +10,15 @@ define('LOCAL_DOMAIN', 'amydepalma.local');
 define('ALD_VERSION', '1.0.0');
 
 /**
- * Includes
+ * Includes & Functions
  */
-array_map(function ($file) {
-	$filepath = "/includes/{$file}.php";
-	require_once(get_template_directory() . $filepath);
-},[
-	'utilities',
-	'post-types',
-	'taxonomies',
-	'template-tags'
-]);
+foreach(glob(get_template_directory() . "/includes/*.php") as $file){
+	require $file;
+}
 
-/**
- * Functions
- */
-array_map(function ($file) {
-	$filepath = "/functions/{$file}.php";
-	require_once(get_template_directory() . $filepath);
-},[
-	'theme-setup',
-	'dequeue-unused-scripts',
-	'enqueue-scripts-styles',
-	'disable-comments',
-	'custom-block-category'
-]);
-
+foreach(glob(get_template_directory() . "/functions/*.php") as $file){
+	require $file;
+}
 
 /**
  * Adds Reusable Blocks to ACF post types
