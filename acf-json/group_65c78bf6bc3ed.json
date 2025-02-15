@@ -1,0 +1,228 @@
+{
+    "key": "group_65c78bf6bc3ed",
+    "title": "Price Log",
+    "fields": [
+        {
+            "key": "field_65c8d9351cc6a",
+            "label": "Price Log",
+            "name": "price_log",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 1,
+            "rows_per_page": 10,
+            "min": 1,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Entry",
+            "sub_fields": [
+                {
+                    "key": "field_65c8d9351cc6d",
+                    "label": "Date",
+                    "name": "log_date",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "m\/d\/Y",
+                    "return_format": "m\/d\/Y",
+                    "first_day": 1,
+                    "parent_repeater": "field_65c8d9351cc6a"
+                },
+                {
+                    "key": "field_65c8d9351cc6e",
+                    "label": "Store",
+                    "name": "store",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "itagp-store",
+                    "add_term": 1,
+                    "save_terms": 1,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "bidirectional": 0,
+                    "multiple": 0,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_65c8d9351cc6a"
+                },
+                {
+                    "key": "field_65c8d9351cc6f",
+                    "label": "Brand",
+                    "name": "brand",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "itagp-brand",
+                    "add_term": 1,
+                    "save_terms": 1,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "bidirectional": 0,
+                    "multiple": 0,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_65c8d9351cc6a"
+                },
+                {
+                    "key": "field_65c8d9351cc70",
+                    "label": "Price",
+                    "name": "price",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "$",
+                    "append": "",
+                    "parent_repeater": "field_65c8d9351cc6a"
+                },
+                {
+                    "key": "field_65c8d9351cc71",
+                    "label": "Size",
+                    "name": "size",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65c8d9351cc6a"
+                },
+                {
+                    "key": "field_65c8d9351cc72",
+                    "label": "Unit",
+                    "name": "unit",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "lb": "lb",
+                        "oz": "oz",
+                        "g": "g",
+                        "pcs": "pcs",
+                        "L": "L",
+                        "mL": "mL",
+                        "gal": "gal",
+                        "qt": "qt",
+                        "pt": "pt",
+                        "kg": "kg"
+                    },
+                    "default_value": "oz",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_65c8d9351cc6a"
+                },
+                {
+                    "key": "field_65c8d9351cc73",
+                    "label": "Discount",
+                    "name": "discount",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "sale": "Sale",
+                        "coupon": "Coupon"
+                    },
+                    "default_value": [],
+                    "return_format": "value",
+                    "multiple": 1,
+                    "allow_null": 1,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_65c8d9351cc6a"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "itagp-item"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1712541927
+}
